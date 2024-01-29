@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class SimpleInterest {
+    public static void main(String[] args) {	
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter the principal amount: ");
+        double principal = scanner.nextDouble();
+        System.out.print("Enter the no of years: ");
+        int years = scanner.nextInt();
+        System.out.print("Is customer senior citizen (y/n): ");
+        String isSenior = scanner.next();
+        double interest = calculateInterest(principal, years, isSenior);		
+        System.out.println("Simple interest = "+ interest);
+    }
+
+    public static double calculateInterest(double p, int y, String isSenior) {	
+        double rateOfInterest;
+        if(isSenior.equalsIgnoreCase("y")) {
+            rateOfInterest = 12; 
+        } else {
+            rateOfInterest = 10;
+        }	
+        return (p * y * rateOfInterest)/100;	
+    }
+}
