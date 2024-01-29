@@ -1,0 +1,45 @@
+import java.util.Scanner;  
+public class NumberFactors {
+    public static void main(String[] args) {       
+        Scanner sc = new Scanner(System.in);          
+        System.out.print("Enter any number: ");
+        int num = sc.nextInt();          
+        System.out.println("Number of Factors: " + getFactorsCount(num));     
+        System.out.print("Enter n to get nth factor: ");
+        int n = sc.nextInt();  
+        System.out.println("The " + n +"th factor is: "+ getNthFactor(num, n));
+    } 
+    public static int getFactorsCount(int n) {
+        int factors = 0;
+        for(int i = 1; i <= Math.sqrt(n); i++){
+            if(n % i == 0) {
+                if(n / i == i) {
+                    factors++; 
+                }
+                else {
+                    factors+=2;  
+                }
+            }
+        }
+        return factors;
+    }
+    public static int getNthFactor(int num, int n) {
+        int factor = 0, count = 0;
+        for(int i = 1; i <= Math.sqrt(num); i++){ 
+            if(num % i == 0) {           
+                if(num / i == i) {
+                    count++;
+                }
+                else {
+                    count = count+2; 
+                }
+                
+                if(count == n){
+                    factor = i;
+                    break;
+               }
+            }
+        }  
+        return factor;
+    }
+}
