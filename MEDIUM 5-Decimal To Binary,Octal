@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class DecimalToBinaryOctal
+ {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a decimal number: ");
+        int decimal = sc.nextInt();
+        String binary = Integer.toBinaryString(decimal);
+        int octal = Integer.parseInt(Integer.toOctalString(decimal));        
+        System.out.println("Binary Number = " + binary);
+        System.out.println("Octal = " + octal);
+        sc.close();
+    }
+}
