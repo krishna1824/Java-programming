@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Atmmachine {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);        
+        System.out.print("Enter 1st denomination: ");
+        int n1 = sc.nextInt();     
+        System.out.print("Enter number of " + n1 + " notes: ");
+        int d1 = sc.nextInt();
+        System.out.print("Enter 2nd denomination: ");
+        int n2 = sc.nextInt();
+        System.out.print("Enter number of " + n2 + " notes: ");
+        int d2 = sc.nextInt();
+        System.out.print("Enter 3rd denomination: ");
+        int n3 = sc.nextInt();
+        System.out.print("Enter number of " + n3 + " notes: ");
+        int d3 = sc.nextInt();
+        System.out.print("Enter 4th denomination: "); 
+        int n4 = sc.nextInt();
+        System.out.print("Enter number of " + n4 + " notes: ");
+        int d4 = sc.nextInt();
+        int total = n1*d1 + n2*d2 + n3*d3 + n4*d4;
+        System.out.println("Total Available Balance in ATM: " + total);
+        sc.close();
+    }
+}
