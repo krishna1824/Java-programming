@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class square 
+{
+	public static void main(String[] args) 
+	{
+        Scanner input = new Scanner(System.in);
+		System.out.print("Given number:");
+        float a = input.nextFloat();
+        System.out.print("square number:"+(a*a));
+        System.out.println();
+        System.out.print("square number:"+(a*a*a));
+        System.out.println();
+	}
+
+}
