@@ -1,0 +1,27 @@
+
+class Bank {
+    private String name;
+    private double roi;
+    public Bank(String name, double roi) {
+        this.name = name;
+        this.roi = roi;
+    }   
+    public String getName() {
+        return this.name; 
+    } 
+    public double getROI() {
+        return this.roi;
+    }
+}
+public class MAIN {
+    public static void main(String[] args) {
+        Bank sbi = new Bank("SBI", 8.4); 
+        Bank icici = new Bank("ICICI", 7.3);
+        Bank axis = new Bank("Axis", 9.7);  
+        System.out.println(sbi.getName() + ": " + sbi.getROI() + "%");  
+        System.out.println(icici.getName() + ": " + icici.getROI() + "%");
+        System.out.println(axis.getName() + ": " + axis.getROI() + "%");
+
+    }
+
+}
